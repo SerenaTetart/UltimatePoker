@@ -1,7 +1,7 @@
 # UltimatePoker
 2D Texas hold'em poker game project for my school.
 
-The project is made thanks to SDL2 library *(Image, mixer, TTF...)*.
+This project is made thanks to SDL2 library *(Image, mixer, TTF...)*.
 
 To test it there is a .exe inside the test folder.
 
