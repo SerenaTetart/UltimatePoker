@@ -1,0 +1,111 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(519,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(520,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  Button.cpp
+  Card.cpp
+  Engine.cpp
+  Game.cpp
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(8,106): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(8,79): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(9,120): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(9,79): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(10,118): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(10,79): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(11,112): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(11,85): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(12,107): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(12,80): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(13,104): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(13,77): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(17,121): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(17,82): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(18,122): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(18,83): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(19,111): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(19,84): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(24,126): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(24,85): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(26,119): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(26,78): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(28,121): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(28,81): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(29,116): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(29,83): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(50,114): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(50,81): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(52,110): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(52,83): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(53,108): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(53,81): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(129,92): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(129,61): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(132,96): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(132,65): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(134,117): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(134,76): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(169,121): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(169,88): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(170,118): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(170,85): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(201,113): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(201,80): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(207,128): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(207,95): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(218,144): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(218,111): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(224,101): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(224,81): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(380,95): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(380,66): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(381,138): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(381,105): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(382,115): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(382,82): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(390,111): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(390,73): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(396,96): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(396,75): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(405,96): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(405,76): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(413,98): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(413,78): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(414,103): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(414,77): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(420,98): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(420,77): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(421,108): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(421,82): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(423,101): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(423,75): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(425,107): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Game.cpp(425,81): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  GameLogic.cpp
+  InputBox.cpp
+  Main.cpp
+  Player.cpp
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Player.cpp(74,151): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Player.cpp(75,151): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Player.cpp(75,107): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Player.cpp(111,107): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Player.cpp(112,107): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Player.cpp(113,109): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\Player.cpp(114,109): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  Text.cpp
+  TextFrame.cpp
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\TextFrame.cpp(78,41): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\TextFrame.cpp(77,40): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  TextureManager.cpp
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\TextureManager.cpp(85,34): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\TextureManager.cpp(85,34): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\TextureManager.cpp(85,50): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\TextureManager.cpp(85,50): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\TextureManager.cpp(91,35): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\TextureManager.cpp(91,35): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\TextureManager.cpp(91,53): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\TextureManager.cpp(91,53): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\TextureManager.cpp(97,34): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\TextureManager.cpp(97,34): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\TextureManager.cpp(97,50): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\Univ_Poker\TextureManager.cpp(97,50): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Token.cpp
+  Generating Code...
+  Univ_Poker.vcxproj -> C:\Users\Seren\Desktop\Cours_univ\Genie_logiciel\Poker\Univ_Poker\test\UltimatePoker.exe
