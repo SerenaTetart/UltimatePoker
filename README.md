@@ -1,4 +1,5 @@
 # UltimatePoker
+## Informations
 2D Texas hold'em poker game project for my school.
 
 This project is made thanks to SDL2 library *(Image, mixer, TTF...)*.
@@ -7,6 +8,7 @@ To test it there is a .exe inside the test folder.
 
 Assets are located inside the folder **"Univ_Poker/assets"**
 
+## Screenshots
 <p align="center"> <b> In-game view <b>
 <img src="https://user-images.githubusercontent.com/65224852/235274041-89e0f8fa-a59f-4d32-b8d5-d0822742af80.png">
 </p>
