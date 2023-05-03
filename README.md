@@ -4,7 +4,7 @@
 
 This project has been made with SDL2 library *(Image, mixer, TTF...)*.
 
-To test it there is a .exe inside the test folder, assets are located inside the folder **"Univ_Poker/assets"**
+To test it there is a .exe inside the test folder, assets are located inside the folder **"Test/assets"** but if you try to compile and run the project directly with Visual Studio you need to place the assets inside the **"Univ_Poker"** folder.
 
 ## Screenshots
 <p align="center"> <b> In-game view <b>
