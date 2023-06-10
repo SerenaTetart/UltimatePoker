@@ -10,6 +10,9 @@
 #include "Player.h"
 #include "Button.h"
 #include "InputBox.h"
+#include "InputBar.h"
+#include "AchievementTab.h"
+#include "AchievementAnimation.h"
 #include "Text.h"
 
 #define NBRTYPE 4
@@ -23,7 +26,8 @@ enum GameStates {
 	STATE_OPTIONS,
 	STATE_MENU_IA,
 	STATE_MENU_PLAYER,
-	STATE_PAUSE
+	STATE_PAUSE,
+	STATE_ACHIEVEMENTS
 };
 
 class Game {
@@ -74,7 +78,12 @@ private:
 	//Title screen/Menu
 	Button* m_ButtonAIGame; Button* m_ButtonJoinGame; Button* m_ButtonHostGame; Button* m_ButtonAchievements; Button* m_ButtonExit; Button* m_ButtonOptions;
 	//Options
-	Button* m_ButtonOptionsMenu; Button* m_ButtonSetBasicStyle; Button* m_ButtonSetCosmicStyle;
+	Button* m_ButtonOptionsMenu, *m_ButtonSetBasicStyle, *m_ButtonSetCosmicStyle;
+	InputBar* m_VolumeOption; InputBox* m_VolumeInput;
+	//Achievements
+	AchievementTab* m_AchievementTab; AchievementAnimation* m_AchievementAnimation;
+	Achievement* m_Victorious, * m_StraightFlush, * m_FourOfAKind, * m_FullHouse, * m_Straight, * m_Flush, * m_Winner;
+	Button* m_ButtonAchievementsMenu;
 	//Menu I.A & Menu PvP
 	Button* m_ButtonMenuAIMenu; Button* m_ButtonMenuAILaunch;
 	InputBox* m_InputBoxNbrAI; InputBox* m_InputBoxBB; InputBox* m_InputBoxStartGold;

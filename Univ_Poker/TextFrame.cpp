@@ -15,11 +15,11 @@ void TextFrame::Refresh() {
 		SDL_DestroyTexture(m_TextureText);
 		m_TextureText = nullptr;
 	}
-	if (m_Text != "") TextureManager::GetInstance()->LoadTTF_2(&m_TextureText, m_Text, m_ColorText, m_Size, m_Police);
+	if (m_Text != "") TextureManager::GetInstance()->LoadTTF(&m_TextureText, m_Text, m_ColorText, m_Size, m_Police);
 	SDL_QueryTexture(m_TextureText, NULL, NULL, &m_WidthText, &m_HeightText);
 	if (m_Text2 != "") {
 		SDL_Texture* TextureText2;
-		TextureManager::GetInstance()->LoadTTF_2(&TextureText2, m_Text2, m_ColorText2, m_Size);
+		TextureManager::GetInstance()->LoadTTF(&TextureText2, m_Text2, m_ColorText2, m_Size);
 		int width, height;
 		SDL_QueryTexture(TextureText2, NULL, NULL, &width, &height);
 		m_WidthText += width;
@@ -73,7 +73,7 @@ void TextFrame::Draw() {
 	if (m_Active) {
 		if (m_Refresh) { Refresh(); m_Refresh = false; }
 		TextureManager::GetInstance()->Draw(m_TextureID, m_X, m_Y, m_Width, m_Height, m_Scale_x, m_Scale_y, m_Angle, m_Flip); //Cadre
-		TextureManager::GetInstance()->Draw_2(&m_TextureText
+		TextureManager::GetInstance()->Draw(&m_TextureText
 			, m_X + (m_Width * m_Scale_x * 0.5) - (m_WidthText * 0.5)
 			, m_Y + (m_Height * m_Scale_y * 0.5) - (m_HeightText * 0.5)
 			, m_WidthText, m_HeightText, 1.0, 1.0

@@ -27,10 +27,12 @@ class Engine {
 		inline SDL_Renderer* GetRenderer() { return m_Renderer; }
 		inline int GetFramerate() { return m_Framerate; }
 		inline void SetFramerate(int framerate) { m_Framerate = framerate; }
+		inline int GetSoundVolume() { return m_SoundVolume; }
+		inline void SetSoundVolume(int volume) { m_SoundVolume = volume; }
 
 	private:
-		Engine() { m_IsRunning = false; m_Window = nullptr; m_Renderer = nullptr; };
-		bool m_IsRunning; int m_Framerate; Uint64 last_update;
+		Engine() { m_SoundVolume = 100; m_Framerate = 60; last_update = SDL_GetTicks64(); m_IsRunning = false; m_Window = nullptr; m_Renderer = nullptr; };
+		bool m_IsRunning; int m_Framerate, m_SoundVolume; Uint64 last_update;
 		SDL_Window* m_Window;
 		SDL_Renderer* m_Renderer;
 

@@ -18,16 +18,15 @@ void InputBox::Refresh() {
 }
 
 void InputBox::Events(SDL_Event* ev) {
-	if (ev->button.x >= m_X && ev->button.y >= m_Y && ev->button.x <= m_X + m_Width && ev->button.y <= m_Y + m_Height) {
-		//La souris se situe au dessus de la zone
-		if (ev->type == SDL_MOUSEBUTTONDOWN && ev->button.button == SDL_BUTTON_LEFT) {
-			//Clic gauche
+	if (ev->type == SDL_MOUSEBUTTONDOWN && ev->button.button == SDL_BUTTON_LEFT) {
+		if (ev->button.x >= m_X && ev->button.y >= m_Y && ev->button.x <= m_X + m_Width && ev->button.y <= m_Y + m_Height) {
+			//La souris clic gauche au dessus de la zone
 			if (!m_IsSelected) m_IsSelected = true;
 		}
+		else if (m_IsSelected) m_IsSelected = false;
 	}
-	else if (m_IsSelected && ev->type == SDL_MOUSEBUTTONDOWN && ev->button.button == SDL_BUTTON_LEFT) m_IsSelected = false;
 	// Si la zone est selectionnée et que l'utilisateur écrit: concatener le texte
-	if (m_IsSelected && ev->type == SDL_KEYDOWN) {
+	else if (m_IsSelected && ev->type == SDL_KEYDOWN) {
 		bool tmp = false;
 		if (ev->key.keysym.sym == SDLK_BACKSPACE && m_Text.length() > 0) { m_Text.pop_back(); tmp = true; }
 		else if (m_NumberOnly && m_Text.length() < m_LimitChar && ev->key.keysym.sym >= SDLK_0 && ev->key.keysym.sym <= SDLK_9) { m_Text += std::to_string((int)(ev->key.keysym.sym - SDLK_0)); tmp = true; }

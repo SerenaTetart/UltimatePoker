@@ -17,24 +17,24 @@ void Text::Refresh() {
 		SDL_DestroyTexture(m_TextureText);
 		m_TextureText = nullptr;
 	}
-	if (m_Text != "") TextureManager::GetInstance()->LoadTTF_2(&m_TextureText, m_Text, m_ColorText, m_Size, m_Police);
-	SDL_QueryTexture(m_TextureText, NULL, NULL, &m_WidthText, &m_HeightText);
+	if (m_Text != "") TextureManager::GetInstance()->LoadTTF(&m_TextureText, m_Text, m_ColorText, m_Size, m_Police);
+	SDL_QueryTexture(m_TextureText, NULL, NULL, &m_Width, &m_Height);
 	if (m_Text2 != "") {
 		SDL_Texture* TextureText2;
-		TextureManager::GetInstance()->LoadTTF_2(&TextureText2, m_Text2, m_ColorText2, m_Size);
+		TextureManager::GetInstance()->LoadTTF(&TextureText2, m_Text2, m_ColorText2, m_Size);
 		int width, height;
 		SDL_QueryTexture(TextureText2, NULL, NULL, &width, &height);
-		m_WidthText += width;
-		SDL_Texture* targetText = SDL_CreateTexture(Engine::GetInstance()->GetRenderer(), SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, m_WidthText, m_HeightText);
+		m_Width += width;
+		SDL_Texture* targetText = SDL_CreateTexture(Engine::GetInstance()->GetRenderer(), SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, m_Width, m_Height);
 		if (targetText != nullptr) {
 			SDL_SetRenderTarget(Engine::GetInstance()->GetRenderer(), targetText);
 			SDL_SetRenderDrawColor(Engine::GetInstance()->GetRenderer(), 0, 0, 0, 255);
 			SDL_RenderClear(Engine::GetInstance()->GetRenderer());
-			SDL_Rect dstRect = { 0, 0, m_WidthText - width, m_HeightText };
+			SDL_Rect dstRect = { 0, 0, m_Width - width, m_Height };
 			SDL_RenderCopy(Engine::GetInstance()->GetRenderer(), m_TextureText, NULL, &dstRect);
-			dstRect = { m_WidthText - width, m_HeightText - height, width, height };
+			dstRect = { m_Width - width, m_Height - height, width, height };
 			SDL_RenderCopy(Engine::GetInstance()->GetRenderer(), TextureText2, NULL, &dstRect);
-			SDL_SetRenderTarget(Engine::GetInstance()->GetRenderer(), NULL);
+			SDL_SetRenderTarget(Engine::GetInstance()->GetRenderer(), nullptr);
 			SDL_DestroyTexture(m_TextureText);
 			SDL_DestroyTexture(TextureText2);
 			m_TextureText = targetText;
@@ -56,14 +56,12 @@ void Text::Events(SDL_Event* ev) {
 }
 
 void Text::Update(float dt) {
-	if (m_Floating) {
-		m_Y -= 50*(dt/1000);
-	}
+	if (m_Floating) m_Y -= 50*(dt/1000);
 }
 
 void Text::Draw() {
 	if (m_Refresh) { Refresh(); m_Refresh = false; }
-	TextureManager::GetInstance()->Draw_2(&m_TextureText, m_X, m_Y, m_WidthText, m_HeightText, m_Scale_x, m_Scale_y, m_Angle, m_Flip);
+	TextureManager::GetInstance()->Draw(&m_TextureText, m_X - m_Width*0.5, m_Y, m_Width, m_Height, m_Scale_x, m_Scale_y, m_Angle, m_Flip);
 }
 
 void Text::Clean() {

@@ -19,8 +19,7 @@ public:
 	inline Uint64 GetTimer() { return m_Timer; }
 
 private:
-	int m_WidthText, m_HeightText;
-	int m_Size, m_Police; Uint64 m_Timer; int m_GameObjectID;
+	int m_Size, m_Police; Uint64 m_Timer;
 	std::string m_Text, m_Text2;
 	SDL_Color m_ColorText, m_ColorText2;
 	SDL_Texture* m_TextureText;

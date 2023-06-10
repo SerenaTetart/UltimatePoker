@@ -5,14 +5,14 @@
 #include <random>
 
 void getPlayerPosition(int playerPos, int *pos_x, int *pos_y) {
-	if (playerPos == 0) { *pos_x = 610; *pos_y = 635; }
-	else if (playerPos == 1) { *pos_x = 905; *pos_y = 445; }
-	else if (playerPos == 2) { *pos_x = 610; *pos_y = 270; }
-	else if (playerPos == 3) { *pos_x = 320; *pos_y = 450; }
-	else if (playerPos == 4) { *pos_x = 810; *pos_y = 585; }
-	else if (playerPos == 5) { *pos_x = 805; *pos_y = 308; }
-	else if (playerPos == 6) { *pos_x = 415; *pos_y = 305; }
-	else if (playerPos == 7) { *pos_x = 415; *pos_y = 600; }
+	if (playerPos == 0) { *pos_x = 635; *pos_y = 635; }
+	else if (playerPos == 1) { *pos_x = 930; *pos_y = 445; }
+	else if (playerPos == 2) { *pos_x = 635; *pos_y = 270; }
+	else if (playerPos == 3) { *pos_x = 345; *pos_y = 450; }
+	else if (playerPos == 4) { *pos_x = 835; *pos_y = 585; }
+	else if (playerPos == 5) { *pos_x = 830; *pos_y = 308; }
+	else if (playerPos == 6) { *pos_x = 440; *pos_y = 305; }
+	else if (playerPos == 7) { *pos_x = 440; *pos_y = 600; }
 }
 
 void Game::Bet(int playerNbr,int bet, bool ok) {
@@ -20,6 +20,7 @@ void Game::Bet(int playerNbr,int bet, bool ok) {
 	int betGold = m_Player[playerNbr]->GetBetMoney();
 	m_Player[playerNbr]->SetMoney(gold + betGold - bet);
 	m_Player[playerNbr]->SetBetMoney(bet);
+	if (bet < m_LastBet) Game::GetInstance()->AdjustBet(bet);
 	m_LastBet = bet;
 	if(!ok) m_Player[playerNbr]->SetBetted(true);
 	int pos_x = 0, pos_y = 0;
@@ -32,7 +33,7 @@ void Game::Bet(int playerNbr,int bet, bool ok) {
 void Game::Fold(int playerNbr) {
 	int pos_x = 0, pos_y = 0;
 	getPlayerPosition(m_PlayerOrder[playerNbr], &pos_x, &pos_y);
-	Text* betText = new Text(Properties("", pos_x, pos_y, 1, 1), 26, 0, "Fold !", { 255, 0, 0 }, "", { 0, 0, 0 }, true);
+	Text* betText = new Text(Properties("", pos_x, pos_y, 1, 1), 26, 0, "Se couche", { 255, 0, 0 }, "", { 0, 0, 0 }, true);
 	m_TextVector.push_back(betText);
 	m_Player[m_PlayerOrder[playerNbr]]->Fold(true);
 }
@@ -46,6 +47,7 @@ void Game::AdjustBet(int lowestBet) {
 			m_Player[i]->SetBetMoney(lowestBet);
 			m_Player[i]->SetMoney(gold+bet-lowestBet);
 		}
+		m_LastBet = lowestBet;
 	}
 }
 
@@ -138,7 +140,7 @@ void Game::BetPhase(int pos) {
 			//I.A débile: 50% Check ou tapis || 25% Raise ou tapis || 25% Fold
 			int randomNbr = rand() % 4;
 			bool lastPlayer = true;
-			for (int i = pos; ((i+1) % m_NbrPlayer) != m_Start_pos; i++) {
+			for (int i = (pos+1)%m_NbrPlayer; i != m_Start_pos; i++) {
 				if (!m_Player[m_PlayerOrder[i % m_NbrPlayer]]->GetSurrender() && !m_Player[m_PlayerOrder[i % m_NbrPlayer]]->GetFold()) {
 					lastPlayer = false;
 					break;
@@ -153,7 +155,6 @@ void Game::BetPhase(int pos) {
 				int gold = m_Player[m_PlayerOrder[pos]]->GetMoney();
 				int bet = m_LastBet; if (gold < m_LastBet) bet = gold;
 				Bet(m_PlayerOrder[pos], bet);
-				if (bet < m_LastBet) AdjustBet(bet);
 			}
 			else if (randomNbr == 2) {
 				//Raise par une valeur random
@@ -165,7 +166,6 @@ void Game::BetPhase(int pos) {
 					if (bet > gold) bet = gold; //Tapis
 				}
 				Bet(m_PlayerOrder[pos], bet);
-				if (bet < m_LastBet) AdjustBet(bet);
 			}
 			else {
 				std::cout << "fold !\n";
@@ -268,6 +268,23 @@ void Game::Showdown() {
 			}
 			if (inc >= 4) {
 				std::cout << "QUINTE FLUSH !\n";
+				if (m_PlayerOrder[i] == 0) {
+					if (!m_StraightFlush->GetValidated()) {
+						m_StraightFlush->SetValidated(true);
+						m_AchievementTab->Refresh();
+						m_AchievementAnimation->PlayAchievement(m_StraightFlush);
+					}
+					if (!m_Straight->GetValidated()) {
+						m_Straight->SetValidated(true);
+						m_AchievementTab->Refresh();
+						m_AchievementAnimation->PlayAchievement(m_Straight);
+					}
+					if (!m_Flush->GetValidated()) {
+						m_Flush->SetValidated(true);
+						m_AchievementTab->Refresh();
+						m_AchievementAnimation->PlayAchievement(m_Flush);
+					}
+				}
 				if (score_max < 9* (NBRCARDTYPE + 1) +comb_value) { score_max = 9 * (NBRCARDTYPE+1) + comb_value; ind_max = i; }
 				continue;
 			}
@@ -280,6 +297,11 @@ void Game::Showdown() {
 			}
 			if (inc >= 3) {
 				std::cout << "CARRE !\n";
+				if ((m_PlayerOrder[i] == 0) && !m_FourOfAKind->GetValidated()) {
+					m_FourOfAKind->SetValidated(true);
+					m_AchievementTab->Refresh();
+					m_AchievementAnimation->PlayAchievement(m_FourOfAKind);
+				}
 				if (score_max < 8 * (NBRCARDTYPE + 1) + comb_value) { score_max = 8 * (NBRCARDTYPE + 1) + comb_value; ind_max = i; }
 				else if (score_max == 8 * (NBRCARDTYPE + 1) + comb_value) {
 					//Départager avec la carte forte
@@ -320,6 +342,11 @@ void Game::Showdown() {
 				}
 				if (inc >= 1) {
 					std::cout << "FULL !\n";
+					if ((m_PlayerOrder[i] == 0) && !m_FullHouse->GetValidated()) {
+						m_FullHouse->SetValidated(true);
+						m_AchievementTab->Refresh();
+						m_AchievementAnimation->PlayAchievement(m_FullHouse);
+					}
 					if (score_max < 7 * (NBRCARDTYPE + 1) + comb_value) { score_max = 7 * (NBRCARDTYPE + 1) + comb_value; score_secour = comb_value2; ind_max = i; }
 					else if (score_max == 7 * (NBRCARDTYPE + 1) + comb_value) {
 						if(score_secour < comb_value2) { score_max = 7 * (NBRCARDTYPE + 1) + comb_value; score_secour = comb_value2; ind_max = i; }
@@ -358,6 +385,11 @@ void Game::Showdown() {
 			}
 			if (inc >= 4) {
 				std::cout << "COULEUR !\n";
+				if ((m_PlayerOrder[i] == 0) && !m_Flush->GetValidated()) {
+					m_Flush->SetValidated(true);
+					m_AchievementTab->Refresh();
+					m_AchievementAnimation->PlayAchievement(m_Flush);
+				}
 				if (score_max < 6 * (NBRCARDTYPE + 1) + comb_value) { score_max = 6 * (NBRCARDTYPE + 1) + comb_value; ind_max = i; }
 				continue;
 			}
@@ -370,6 +402,11 @@ void Game::Showdown() {
 			}
 			if (inc >= 4) {
 				std::cout << "QUINTE !\n";
+				if ((m_PlayerOrder[i] == 0) && !m_Straight->GetValidated()) {
+					m_Straight->SetValidated(true);
+					m_AchievementTab->Refresh();
+					m_AchievementAnimation->PlayAchievement(m_Straight);
+				}
 				if (score_max < 5 * (NBRCARDTYPE + 1) + comb_value) { score_max = 5 * (NBRCARDTYPE + 1) + comb_value; ind_max = i; }
 				continue;
 			}

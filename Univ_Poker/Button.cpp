@@ -19,7 +19,7 @@ void Button::Refresh() {
 }
 
 void Button::Events(SDL_Event *ev) {
-	if (m_Active) {
+	if ((ev->type == SDL_MOUSEMOTION || ev->type == SDL_MOUSEBUTTONDOWN) && m_Active) {
 		if (ev->button.x >= m_X && ev->button.y >= m_Y && ev->button.x <= m_X + m_Width * m_Scale_x && ev->button.y <= m_Y + m_Height * m_Scale_y) {
 			//La souris se situe au dessus du bouton
 			if (!m_IsSelected) {

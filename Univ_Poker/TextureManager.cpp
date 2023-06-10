@@ -45,8 +45,7 @@ bool TextureManager::LoadTTF(std::string id, std::string text, SDL_Color color, 
 	return true;
 }
 
-#include <iostream>
-bool TextureManager::LoadTTF_2(SDL_Texture** textureMessage, std::string text, SDL_Color color, int size, int police) {
+bool TextureManager::LoadTTF(SDL_Texture** textureMessage, std::string text, SDL_Color color, int size, int police) {
 	TTF_Font* font = nullptr;
 	if (police == 0) {
 		if (Game::GetInstance()->GetGameStyle() == "basic") font = TTF_OpenFont("assets/ttf/Regardant.ttf", size);
@@ -59,6 +58,33 @@ bool TextureManager::LoadTTF_2(SDL_Texture** textureMessage, std::string text, S
 	}
 	TTF_SetFontStyle(font, TTF_STYLE_BOLD);
 	SDL_Surface* surfaceMessage = TTF_RenderText_Blended(font, text.c_str(), color);
+	if (surfaceMessage == nullptr) {
+		SDL_Log("Echec du chargement du TTF: %s\n%s", text.c_str(), TTF_GetError());
+		return false;
+	}
+	*textureMessage = SDL_CreateTextureFromSurface(Engine::GetInstance()->GetRenderer(), surfaceMessage);
+	if (*textureMessage == nullptr) {
+		SDL_Log("Echec de la création de la texture du TTF depuis la surface: %s", SDL_GetError());
+		return false;
+	}
+	TTF_CloseFont(font);
+	SDL_FreeSurface(surfaceMessage); surfaceMessage = nullptr;
+	return true;
+}
+
+bool TextureManager::LoadTTF_Wrapped(SDL_Texture** textureMessage, std::string text, SDL_Color color, int size, int police, int width) {
+	TTF_Font* font = nullptr;
+	if (police == 0) {
+		if (Game::GetInstance()->GetGameStyle() == "basic") font = TTF_OpenFont("assets/ttf/Regardant.ttf", size);
+		else if (Game::GetInstance()->GetGameStyle() == "cosmic") font = TTF_OpenFont("assets/ttf/game_font_7.ttf", size);
+	}
+	else if (police == 1) font = TTF_OpenFont("assets/ttf/Regardant.ttf", size);
+	if (font == nullptr) {
+		SDL_Log("Echec du chargement de la police TTF: %s", TTF_GetError());
+		return false;
+	}
+	TTF_SetFontStyle(font, TTF_STYLE_BOLD);
+	SDL_Surface* surfaceMessage = TTF_RenderText_Blended_Wrapped(font, text.c_str(), color, width);
 	if (surfaceMessage == nullptr) {
 		SDL_Log("Echec du chargement du TTF: %s\n%s", text.c_str(), TTF_GetError());
 		return false;
@@ -86,7 +112,7 @@ void TextureManager::Draw(std::string id, int x, int y, int width, int height, d
 	SDL_RenderCopyEx(Engine::GetInstance()->GetRenderer(), m_TextureMap[id], &srcRect, &dstRect, angle, nullptr, flip);
 }
 
-void TextureManager::Draw_2(SDL_Texture** texture, int x, int y, int width, int height, double scale_x, double scale_y, double angle, SDL_RendererFlip flip) {
+void TextureManager::Draw(SDL_Texture** texture, int x, int y, int width, int height, double scale_x, double scale_y, double angle, SDL_RendererFlip flip) {
 	SDL_Rect srcRect = { 0, 0, width, height };
 	SDL_Rect dstRect = { x, y, width * scale_x, height * scale_y };
 	SDL_RenderCopyEx(Engine::GetInstance()->GetRenderer(), *texture, &srcRect, &dstRect, angle, nullptr, flip);

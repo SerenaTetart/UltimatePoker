@@ -6,7 +6,6 @@
 Engine* Engine::s_Instance = nullptr;
 
 bool Engine::Init() {
-	m_Framerate = 60;
 	if (SDL_Init(SDL_INIT_VIDEO) != 0 && IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG) != 0) {
 		SDL_Log("Echec de l'initialisation de SDL: %s", SDL_GetError());
 		return false;
@@ -34,7 +33,9 @@ bool Engine::Init() {
 	TextureManager::GetInstance()->Load("txtframe_menu", "assets/txtframes/basic_1.png");
 	TextureManager::GetInstance()->Load("inputbox_menu", "assets/txtframes/basic_input.png");
 	TextureManager::GetInstance()->Load("inputbox_menu2", "assets/txtframes/basic_input2.png");
-	last_update = SDL_GetTicks64();
+	TextureManager::GetInstance()->Load("achievement_frame", "assets/txtframes/achievement.png");
+	TextureManager::GetInstance()->Load("achievement_frame_off", "assets/txtframes/achievement.png");
+	TextureManager::GetInstance()->ModulateTexture("achievement_frame_off", 150, 150, 150);
 	return (m_IsRunning = true);
 }
 

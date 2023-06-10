@@ -19,6 +19,12 @@
     <Filter Include="Source Files\GameObjects">
       <UniqueIdentifier>{2cfd2764-9ea9-40a2-b896-e90871ba76fa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Achievements">
+      <UniqueIdentifier>{0f70e348-b8e3-424f-9d08-cbf6f33f4129}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Achievements">
+      <UniqueIdentifier>{01e99ebe-1f79-4ab8-9e6a-0cba947a175c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -57,6 +63,18 @@
     <ClCompile Include="Text.cpp">
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
+    <ClCompile Include="AchievementTab.cpp">
+      <Filter>Source Files\Achievements</Filter>
+    </ClCompile>
+    <ClCompile Include="Achievement.cpp">
+      <Filter>Source Files\Achievements</Filter>
+    </ClCompile>
+    <ClCompile Include="AchievementAnimation.cpp">
+      <Filter>Source Files\Achievements</Filter>
+    </ClCompile>
+    <ClCompile Include="InputBar.cpp">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h">
@@ -90,6 +108,18 @@
       <Filter>Header Files\GameObjects</Filter>
     </ClInclude>
     <ClInclude Include="Text.h">
+      <Filter>Header Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Achievement.h">
+      <Filter>Header Files\Achievements</Filter>
+    </ClInclude>
+    <ClInclude Include="AchievementTab.h">
+      <Filter>Header Files\Achievements</Filter>
+    </ClInclude>
+    <ClInclude Include="AchievementAnimation.h">
+      <Filter>Header Files\Achievements</Filter>
+    </ClInclude>
+    <ClInclude Include="InputBar.h">
       <Filter>Header Files\GameObjects</Filter>
     </ClInclude>
   </ItemGroup>
